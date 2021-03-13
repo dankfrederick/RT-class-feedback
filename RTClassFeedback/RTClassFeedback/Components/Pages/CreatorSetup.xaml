@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RTClassFeedback.Components.Pages.CreatorSetup">
+    <ContentPage.Content>
+        <StackLayout Padding="25">
+            <Label Text="Welcome to Room Setup"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Header"/>
+            <Label Text="Comprehension Lookback Period (minutes)"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start"/>
+            <Slider x:Name="compSlider" Maximum="60" Minimum="1" Value="10"/>
+            <Label Text="{Binding Source={x:Reference compSlider}, Path=Value, StringFormat='{0.N0}'}"/>
+            <Label Text="Enter Room Name:" Padding="0,50,0,0"/>
+            <Entry Keyboard="Text" Placeholder="Room Name" x:Name="roomNameEntry"/>
+
+            <Button Text="Create Room" HorizontalOptions="Center" Padding="50" Clicked="Create_Clicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

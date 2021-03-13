@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RTClassFeedback.WelcomePage"
+             Title="RT Class Feedback">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Real Time Class Feedback"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="Header"
+                FontAttributes="Bold"
+                Padding="20,50,50,250"/>
+
+            <Label Text="Create or join a room" HorizontalOptions="Center"/>
+            <Button Text="Create Room" Clicked="Create_Clicked"/>
+            <Button Text="Join Room" Clicked="Join_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
