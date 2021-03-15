@@ -11,10 +11,16 @@
             <Label Text="Comprehension Lookback Period (minutes)"
                    VerticalOptions="Start"
                    HorizontalOptions="Start"/>
+            
+            <!--Options for Room Creator to set initial preferences for the room -->
             <Slider x:Name="compSlider" Maximum="60" Minimum="1" Value="10"/>
             <Label Text="{Binding Source={x:Reference compSlider}, Path=Value, StringFormat='{0.N0}'}"/>
+            
+            
             <Label Text="Enter Room Name:" Padding="0,50,0,0"/>
             <Entry Keyboard="Text" Placeholder="Room Name" x:Name="roomNameEntry"/>
+            <Label Text="Enter Display Name:" Padding="0,50,0,0"/>
+            <Entry Keyboard="Text" Placeholder="Display Name" x:Name="displayNameEntry"/>
 
             <Button Text="Create Room" HorizontalOptions="Center" Padding="50" Clicked="Create_Clicked"/>
 

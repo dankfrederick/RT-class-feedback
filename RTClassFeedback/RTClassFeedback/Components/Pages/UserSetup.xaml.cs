@@ -16,5 +16,11 @@ namespace RTClassFeedback.Components.Pages
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            // new RoomUser(long IP, string displayNa, string backgroundCol, bool ano, string anonCol)
+            // Can not implement until binding between XAML and backend is resolved
+        }
     }
 }

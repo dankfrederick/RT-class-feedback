@@ -7,6 +7,13 @@
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Enter Room to Join:" Padding="0,50,0,0"/>
+            <Entry Keyboard="Text" Placeholder="Room Name" x:Name="roomNameEntry"/>
+            <Label Text="Enter Display Name:" Padding="0,50,0,0"/>
+            <Entry Keyboard="Text" Placeholder="Display Name" x:Name="displayNameEntry"/>
+
+            <Button Text="Enter Room" HorizontalOptions="Center" Padding="50" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

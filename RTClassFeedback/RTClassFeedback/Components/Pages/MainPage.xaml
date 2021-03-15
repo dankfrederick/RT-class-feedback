@@ -7,15 +7,21 @@
         <Frame BackgroundColor="gray" Padding="24" CornerRadius="0">
             <Label Text="RT Class Feedback" HorizontalTextAlignment="Start" TextColor="White" FontSize="36"/>
         </Frame>
+        
+        <!--Room identification header, used so the current room is always identified to the user-->
+        <Label x:Name="titleText" FontSize="Header"/>
+        
+        <!--Placeholder for the chart object-->
+        <Image Source=".\Components\Images\tempChart.PNG"/>
 
-        <Label Text="" x:Name="titleText" FontSize="Header"/>
+        <!--Creation of Chat Window and Binding to the Message Object-->
         <ListView x:Name="chatWindow" ItemTapped="chatWindow_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="{Binding messageText}" HorizontalOptions="StartAndExpand" TextColor="Gray" BackgroundColor="{Binding color}"/>
-                            <Button Text="Fade"/>
+                            <Button Text="Highlight"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

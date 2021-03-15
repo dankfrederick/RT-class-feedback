@@ -4,27 +4,23 @@ using System.Text;
 
 namespace RTClassFeedback.Components.Classes
 {
-    class Message
+    class Vote
     {
         public long timeStamp;
-        public string displayName;
-        public string messageText;
-        public bool faded = false;
-        public bool highlighted = false;
-        public string backgroundColor;
+        public long author;
+        public int comprehension; // -1 = no, 0 = neutral, 1 = good comprehension
 
         // Empty Constructor (no current use case)
-        public Message()
+        public Vote()
         {
 
         }
         // Parametric Constructor - standard use case, object used for the storage of all information to be stored in JSON format
-        public Message(long time, string auth, string text, string color)
+        public Vote(long time, long auth, int comp)
         {
             this.timeStamp = time;
-            this.displayName = auth;
-            this.messageText = text;
-            this.backgroundColor = color;
+            this.author = auth;
+            this.comprehension = comp;
         }
     }
 }

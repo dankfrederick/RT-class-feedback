@@ -15,10 +15,16 @@ namespace RTClassFeedback
         {
             InitializeComponent();
 
-            chatWindow.ItemsSource = new List<Message>
+            List<Message> _messageGroup = new List<Message>
             {
-                new Message(TimeFuncs.makeTimeStamp(), 0, "Chat window initiated", "gray")
+                // Hard coded test message objects
+                new Message(TimeFuncs.makeTimeStamp(), "test1", "Chat window initiated", "gray"),
+                new Message(TimeFuncs.makeTimeStamp(), "test2", "Test Test", "red")
             };
+
+            chatWindow.ItemsSource = _messageGroup;
+
+            
 
             titleText.Text = "Welcome to Room: {name}";
                 // + RoomCreator.roomName;
@@ -26,12 +32,12 @@ namespace RTClassFeedback
 
         private void chatWindow_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-
+            //Use this for fading messages
         }
 
         private void sendMessage_Clicked(object sender, EventArgs e)
         {
-            new Message(TimeFuncs.makeTimeStamp(), 0, "Test", "Yellow");
+            //sender.add(new Message(TimeFuncs.makeTimeStamp(), 0, "Test", "Yellow"));
         }
     }
 }

@@ -6,10 +6,11 @@ namespace RTClassFeedback.Components.Classes
 {
     abstract class Users
     {
-        public long IPaddress;
+        // public long IPaddress;   Future Implimentation
         public string displayName;
         public string backgroundColor;
-        public List<string> availColors = new List<string>
+        private const string RESTURL = "https;//jsonplaceholder.typicode.com/posts";
+        public List<string> availColors = new List<string>        
         {
             "Red",
             "Orange",
@@ -17,18 +18,8 @@ namespace RTClassFeedback.Components.Classes
             "Green",
             "Blue",
             "Indigo",
-            "Violet"
+            "Violet",
+            "gray"
         };
-
-        //Method for sending messages from 
-        public void sendMessage(string mess, bool anon)
-        {
-
-        }
-
-        public void sendMessage(string mess)
-        {
-
-        }
     }
 }

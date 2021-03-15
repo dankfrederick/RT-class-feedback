@@ -21,6 +21,7 @@ namespace RTClassFeedback.Components.Pages
         async private void Create_Clicked(object sender, EventArgs e)
         {
             // RoomCreator creator = new RoomCreator((int) compSlider.GetValue(Value), long IP, string room, string dispName, string backColor));
+            // Can not implement until binding issues between XAML and backend resolved
             await Navigation.PushAsync(new MainPage());
         }
     }

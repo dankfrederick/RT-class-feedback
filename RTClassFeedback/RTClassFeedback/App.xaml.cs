@@ -10,6 +10,7 @@ namespace RTClassFeedback
         {
             InitializeComponent();
 
+            //Sets first page to Welcome Page at application launch. Navigation enabled to allow for page transition
             MainPage = new NavigationPage(new WelcomePage());
         }
 
