@@ -6,6 +6,7 @@ using Xamarin.Forms.Xaml;
 
 namespace RTClassFeedback.Components.MarkupExtensions
 {
+    [ContentProperty (nameof(ResourceId))]
     public class EmbeddedImage : IMarkupExtension
     {
         public string ResourceId { get; set; }

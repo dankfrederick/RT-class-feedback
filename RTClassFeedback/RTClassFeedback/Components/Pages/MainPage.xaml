@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RTClassFeedback.MainPage">
+             x:Class="RTClassFeedback.MainPage"
+             xmlns:local="clr-namespace:RTClassFeedback.Components.MarkupExtensions">
 
     <StackLayout>
         <Frame BackgroundColor="gray" Padding="24" CornerRadius="0">
@@ -12,7 +13,7 @@
         <Label x:Name="titleText" FontSize="Header"/>
         
         <!--Placeholder for the chart object-->
-        <Image Source=".\Components\Images\tempChart.PNG"/>
+        <Image Source="{local:EmbeddedImage RTClassFeedback.Components.Images.tempChart.PNG}" Aspect="AspectFit"/>
 
         <!--Creation of Chat Window and Binding to the Message Object-->
         <ListView x:Name="chatWindow" ItemTapped="chatWindow_ItemTapped">
