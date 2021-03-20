@@ -1,6 +1,8 @@
-# RT Class Feedback
+# RT Class Feedback (Archived, Not Active)
 A C# application for Students to anonymously communicate with an instructor their level of understanding and pose questions.
 
+## Project changed
+- Changed project design to a web app to increase flexibility and reduce footprint. Project had no plans to use mobile features and will now be built in HTML/JS with a C# backend. This repository will be maintained for reference only.
 
 ## Problem Statement
 - Teaching in the virtual format sucks:
